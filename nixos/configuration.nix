@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./main-user.nix
     ];
 
   # Bootloader.
@@ -78,19 +79,22 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.sean = {
-    isNormalUser = true;
-    description = "sean";
-    extraGroups = [ "networkmanager" "wheel" ];
+  # users.users.sean = {
+  #   isNormalUser = true;
+  #   description = "sean";
+  #   extraGroups = [ "networkmanager" "wheel" ];
     
-    # Laptop Public Key
-    openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBWPEWzFeIINdIlYzT742n6Mi0sM+HD/nTzrF+3Vyu5W" ];
-    packages = with pkgs; [
-      firefox
-      git
-      vscodium
-    ];
-  };
+  #   # Laptop Public Key
+  #   openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBWPEWzFeIINdIlYzT742n6Mi0sM+HD/nTzrF+3Vyu5W" ];
+  #   packages = with pkgs; [
+  #     firefox
+  #     git
+  #     vscodium
+  #   ];
+  # };
+
+  main-user.enable = true;
+  main-user.userName = "sean";
   
   # Enable OpenSSH daemon
   services.openssh = {
