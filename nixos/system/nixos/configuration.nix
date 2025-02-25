@@ -50,15 +50,15 @@
       vscodium
     ];
   };
-  home-manager = {
-    extraSpecialArgs = { inherit inputs };
-    users = {
-      "sean" = import ../
-    };
-  }
+  # home-manager = {
+  #   extraSpecialArgs = { inherit inputs };
+  #   users = {
+  #     "sean" = import ../
+  #   };
+  # }
 
 
-    # Bootloader.
+  # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
