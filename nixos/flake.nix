@@ -18,24 +18,48 @@
   };
   
   
-  outputs = { self, nixpkgs, ... }@inputs: 
+  outputs = { self, nixpkgs, home-manager, ... }@inputs: 
+  # `@inputs` will expose the block of code below, to the inputs that you set above.
+
     let
+      # system setting defaults
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+      timezone = "Europe/London";
+      locale = "en_GB.UTF-8";
+
     in
+
     {
       nixosConfigurations = {
         nixos = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
-          specialArgs = {inherit inputs;};
+          specialArgs = {
+            inherit inputs;
+            inherit system;
+            inherit timezone;
+            inherit locale;
+          };
+
           modules = [
-            ./configuration.nix
-            inputs.home-manager.nixosModules.home-manager {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-            }
+            ./system/nixos/configuration.nix
           ];
         };
+        homeConfigurations = {
+          
+          "sean@nixos" = home-manager.lib.homeManagerConfiguration {
+            # pkgs instance for home-manager
+            pkgs = nixpkgs.legacyPackages.${system};
+          
+          extraSpecialArgs = { 
+            inherit inputs;
+          };
+          
+          modules = [ 
+            ./home-manager/nixos/home.nix
+          ];
+
+        };
+      };
     };
   };
 }
