@@ -7,12 +7,14 @@
   system,
   timezone,
   username,
-  home-manager,
   ...
 }:
 
 {
-  imports = [./hardware-configuration.nix];
+  imports = [
+    ./hardware-configuration.nix
+    inputs.home-manager.nixosModules.default
+  ];
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

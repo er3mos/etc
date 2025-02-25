@@ -18,7 +18,7 @@
   };
   
   
-  outputs = { self, nixpkgs, ... }@inputs: 
+  outputs = { self, nixpkgs, home-manager, ... }@inputs: 
   # `@inputs` will expose the block of code below, to the inputs that you set above.
 
     let
