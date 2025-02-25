@@ -11,14 +11,15 @@
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        # specialArgs = { inherit inputs; };
         modules = [
           ./system/nixos/configuration.nix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.jdoe = import ./home-manager/nixos/home.nix;
-            home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager.users.sean = import ./home-manager/nixos/home.nix;
+
             # Optionally, use home-manager.extraSpecialArgs to pass
             # arguments to home.nix
           }
