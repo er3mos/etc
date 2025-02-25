@@ -50,14 +50,14 @@
             # pkgs instance for home-manager
             pkgs = nixpkgs.legacyPackages.${system};
           
-          extraSpecialArgs = { 
-            inherit inputs;
-          };
-          
-          modules = [ 
-            ./home-manager/nixos/home.nix
-          ];
+            extraSpecialArgs = { 
+              inherit inputs;
+            };
 
+            modules = [ 
+              ./home-manager/nixos/home.nix
+            ];
+          };
         };
       };
     };
