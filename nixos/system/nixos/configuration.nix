@@ -7,6 +7,7 @@
   system,
   timezone,
   username,
+  home-manager,
   ...
 }:
 
