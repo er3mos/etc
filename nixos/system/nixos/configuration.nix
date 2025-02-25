@@ -28,9 +28,9 @@
   ];
 
   # global env vars set here
-  environment.variables = { 
-    EDITOR = "nvim";
-  };
+  # environment.variables = { 
+  #   EDITOR = "nvim";
+  # };
 
   # define main user account - TODO: make modular, user.nix?
   programs.fish.enable = true; # enable my main user shell
@@ -51,12 +51,12 @@
       vesktop
     ];
   };
-  # home-manager = {
-  #   extraSpecialArgs = { inherit inputs };
-  #   users = {
-  #     "sean" = import ../
-  #   };
-  # }
+  home-manager = {
+    extraSpecialArgs = { inherit inputs; };
+    users = {
+      "sean" = [ import ./../../home-manager/nixos/home.nix ];
+    };
+  };
 
 
   # Bootloader.
@@ -154,4 +154,5 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
+
 }

@@ -18,7 +18,7 @@
   };
   
   
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: 
+  outputs = { self, nixpkgs, ... }@inputs: 
   # `@inputs` will expose the block of code below, to the inputs that you set above.
 
     let
@@ -43,21 +43,6 @@
           modules = [
             ./system/nixos/configuration.nix
           ];
-        };
-        homeConfigurations = {
-          
-          nixos = home-manager.lib.homeManagerConfiguration {
-            # pkgs instance for home-manager
-            pkgs = nixpkgs.legacyPackages.${system};
-          
-            extraSpecialArgs = { 
-              inherit inputs;
-            };
-
-            modules = [ 
-              ./home-manager/nixos/home.nix
-            ];
-          };
         };
       };
     };
