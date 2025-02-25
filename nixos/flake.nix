@@ -1,16 +1,23 @@
 {
-  description = "Nixos config flake";
+  description = "sean's nixos config - testing";
 
+
+  # Declare all dependencies/programs that we want to use inside inputs. 
   inputs = {
+
+    # Sets the nixpkgs channel to unstable. 
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    # Includes home-manager from nix-community, and pins its version to 
+    # nixpkgs/nixos-unstable above.
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
   };
-
-
+  
+  
   outputs = { self, nixpkgs, ... }@inputs: 
     let
       system = "x86_64-linux";
