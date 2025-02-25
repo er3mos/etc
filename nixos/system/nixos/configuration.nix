@@ -54,13 +54,13 @@
       vesktop
     ];
   };
+  
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users = {
       "sean" = [ import ./../../home-manager/nixos/home.nix ];
     };
   };
-
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
