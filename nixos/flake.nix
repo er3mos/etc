@@ -46,7 +46,7 @@
         };
         homeConfigurations = {
           
-          "sean@nixos" = home-manager.lib.homeManagerConfiguration {
+          nixos = home-manager.lib.homeManagerConfiguration {
             # pkgs instance for home-manager
             pkgs = nixpkgs.legacyPackages.${system};
           

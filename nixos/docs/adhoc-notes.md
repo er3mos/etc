@@ -15,4 +15,6 @@ sudo nixos-rebuild switch --recreate-lock-file --flake .
 > warning: '--recreate-lock-file' is deprecated and will be removed in a future version; use 'nix flake update' instead.
 building the system configuration...
 warning: '--recreate-lock-file' is deprecated and will be removed in a future version; use 'nix flake update' instead.
-evaluation warning: The option `services.xserver.displayManager.autoLogin' defined in `/nix/store/s2jhcq06hxb42lz7zi6lxhs82rj9w2sr-source/nixos/system/nixos/configuration.nix' has been renamed to `services.displayManager.autoLogin'.
+evaluation warning: The option `services.xserver.displayManager.autoLogin' defined in `
+/nix/store/s2jhcq06hxb42lz7zi6lxhs82rj9w2sr-source/nixos/system/nixos/configuration.nix' 
+has been renamed to `services.displayManager.autoLogin'.

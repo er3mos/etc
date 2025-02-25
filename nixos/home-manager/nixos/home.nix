@@ -31,7 +31,7 @@
   imports = [
 			# ../packages/bat.nix
 			# ../packages/brave.nix
-			../packages/direnv.nix
+			nixos/home-manager/packages/direnv.nix
 			# ../packages/erdtree.nix
 			../packages/eza.nix
 			../packages/fd.nix
