@@ -48,6 +48,7 @@
       firefox
       git
       vscodium
+      vesktop
     ];
   };
   # home-manager = {
