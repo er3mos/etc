@@ -55,12 +55,12 @@
     ];
   };
   
-  home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    users = {
-      "sean" = [ import ./../../home-manager/nixos/home.nix ];
-    };
-  };
+  # home-manager = {
+  #   extraSpecialArgs = { inherit inputs; };
+  #   users = {
+  #     "sean" = [ import ./../../home-manager/nixos/home.nix ];
+  #   };
+  # };
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
