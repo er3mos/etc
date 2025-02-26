@@ -2,9 +2,9 @@
 
 {
 
-	# home.packages = with pkgs; [
-  #   fish
-	# ];
+	home.packages = with pkgs; [
+    fish
+	];
 
   programs.fish = {
     enable = true;
@@ -17,7 +17,7 @@
     "llr" = "eza -lhr --no-quotes --time-style long-iso";   
     "lls" = "eza -lh -s size --no-quotes --time-style long-iso";    
     "llt" = "eza -lh -s time --no-quotes --time-style long-iso";  
-    };
+    
 
     # git abbreviations
 		"gaa"  = "git add -A";
@@ -35,7 +35,7 @@
 		"gs"   = "git status";
 		"gst"  = "git stash";
 		"gstp" =  "git stash pop";
-
+    };
 	};
   
 }

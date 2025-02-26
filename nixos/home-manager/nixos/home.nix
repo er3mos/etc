@@ -13,9 +13,13 @@
 
   # enable font config
   fonts.fontconfig.enable = true;
+  # fonts.packages = with pkgs; [
+  #   nerd-fonts.droid-sans-mono
+  #   nerd-fonts.hack
+  # ];
 
   home.packages = [
-    (pkgs.nerdfonts.override { fonts = [ "Hack" ];})
+    # (pkgs.nerdfonts.override { fonts = [ "Hack" ];}) # DEPRECIATED
   ];
 
   nixpkgs.config = {
@@ -46,6 +50,7 @@
 			# ../packages/ripgrep.nix
 			# ../packages/signal-desktop.nix
 			../packages/starship.nix
+      # ../packages/tidal-hifi.nix
 			# ../packages/tree.nix
 			# ../packages/vlc.nix
 			# ../packages/wezterm.nix
