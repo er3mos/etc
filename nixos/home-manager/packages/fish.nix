@@ -20,21 +20,21 @@
     };
 
     # git abbreviations
-		gaa  = "git add -A";
-		ga   = "git add";
-		gbd  = "git branch --delete";
-		gb   = "git branch";
-		gc   = "git commit";
-		gcm  = "git commit -m";
-		gcob = "git checkout -b";
-		gco  = "git checkout";
-		gd   = "git diff";
-		gl   = "git log";
-		gp   = "git push";
-		gpom = "git push origin main";
-		gs   = "git status";
-		gst  = "git stash";
-		gstp =  "git stash pop";
+		"gaa"  = "git add -A";
+		"ga"   = "git add";
+		"gbd"  = "git branch --delete";
+		"gb"   = "git branch";
+		"gc"   = "git commit";
+		"gcm"  = "git commit -m";
+		"gcob" = "git checkout -b";
+		"gco"  = "git checkout";
+		"gd"   = "git diff";
+		"gl"   = "git log";
+		"gp"   = "git push";
+		"gpom" = "git push origin main";
+		"gs"   = "git status";
+		"gst"  = "git stash";
+		"gstp" =  "git stash pop";
 
 	};
   
