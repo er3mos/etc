@@ -6,9 +6,9 @@
     tidal-hifi
 	];
 
-  programs.tidal-hifi = {
-    enable = true;
+  # programs.tidal-hifi = {
+  #   enable = true;
   
-  };
+  # };
   
 }
