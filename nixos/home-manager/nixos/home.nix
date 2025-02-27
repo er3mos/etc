@@ -42,7 +42,7 @@
 			../packages/fd.nix
 			# ../packages/feh.nix
 			../packages/fish.nix
-			# ../packages/helix.nix
+			../packages/fastfetch.nix
 			# ../packages/htop.nix
 			# ../packages/megasync.nix
 			# ../packages/nap.nix
