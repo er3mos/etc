@@ -42,7 +42,7 @@
 			# ../packages/feh.nix
 			../packages/fish.nix
 			# ../packages/helix.nix
-			# ../packages/htop.nix
+			../packages/htop.nix
 			# ../packages/megasync.nix
 			# ../packages/nap.nix
 			# ../packages/qbittorrent.nix
