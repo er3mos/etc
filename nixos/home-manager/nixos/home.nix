@@ -20,7 +20,7 @@
 
   home.packages = [
     # fonts.nerd-fonts.hack
-    # (pkgs.nerdfonts.override { fonts = [ "Hack" ];}) # DEPRECIATED
+    (pkgs.nerdfonts.override { fonts = [ "Hack" ];}) # DEPRECIATED
   ];
 
   nixpkgs.config = {
