@@ -19,6 +19,7 @@
   # ];
 
   home.packages = [
+    fonts.nerd-fonts.hack
     # (pkgs.nerdfonts.override { fonts = [ "Hack" ];}) # DEPRECIATED
   ];
 
@@ -42,7 +43,7 @@
 			# ../packages/feh.nix
 			../packages/fish.nix
 			# ../packages/helix.nix
-			../packages/htop.nix
+			# ../packages/htop.nix
 			# ../packages/megasync.nix
 			# ../packages/nap.nix
 			# ../packages/qbittorrent.nix
@@ -50,7 +51,7 @@
 			# ../packages/ripgrep.nix
 			# ../packages/signal-desktop.nix
 			../packages/starship.nix
-      # ../packages/tidal-hifi.nix
+      ../packages/tidal-hifi.nix
 			# ../packages/tree.nix
 			# ../packages/vlc.nix
 			# ../packages/wezterm.nix
