@@ -19,7 +19,7 @@
   # ];
 
   home.packages = [
-    fonts.nerd-fonts.hack
+    # fonts.nerd-fonts.hack
     # (pkgs.nerdfonts.override { fonts = [ "Hack" ];}) # DEPRECIATED
   ];
 
