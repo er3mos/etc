@@ -47,6 +47,7 @@
     
     # usr packages
     packages = with pkgs; [
+      ventoy
       firefox
       git
       vscodium
