@@ -21,7 +21,7 @@
             home-manager.backupFileExtension = "backup";
             home-manager.users.sean = import ./home-manager/nixos/home.nix;
 
-            # Optionally, use home-manager.extraSpecialArgs to pass
+            # Optionally,  home-manager.extraSpecialArgs to pass
             # arguments to home.nix
           }
         ];
