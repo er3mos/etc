@@ -27,15 +27,20 @@
     git
     neovim
     wget
+    tailscale
   ];
 
   # global env vars set here
   # environment.variables = { 
   #   EDITOR = "nvim";
-  # };
+  # };/
 
+  services.tailscale.enable = true;
+
+  
   # define main user account - TODO: make modular, user.nix?
   programs.fish.enable = true; # enable my main user shell
+  # programs.tailscale.enable = true;
   users.users.sean = {
     isNormalUser = true;
     description = "nixos";
@@ -47,11 +52,13 @@
     
     # usr packages
     packages = with pkgs; [
+      logitech-udev-rules
       ventoy
       firefox
       git
       vscodium
       vesktop
+      tailscale
     ];
   };
   
@@ -67,6 +74,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos"; # Define your hostname.
+  networking.usePredictableInterfaceNames = true;
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
     
   # Configure network proxy if necessary
@@ -76,6 +84,15 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  #nvidia
+  hardware.nvidia-container-toolkit.mount-nvidia-executables = true;
+  hardware.nvidia-container-toolkit.mount-nvidia-docker-1-directories = true;
+  hardware.nvidia.nvidiaSettings = true;
+  hardware.nvidia-container-toolkit.enable = true;
+  hardware.nvidia.nvidiaPersistenced = true;
+  hardware.nvidia.package = true;
+  virtualisation.docker.enableNvidia = true;
+  hardware.nvidia.datacenter.enable = true;
   # Enable OpenSSH daemon
   services.openssh = {
     enable = true;

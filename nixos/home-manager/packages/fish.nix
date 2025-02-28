@@ -11,7 +11,7 @@
     generateCompletions = true;
 
     shellAbbrs = {
-    "ld" = "eza -ld */ --no-quotes --time-style long-iso";    
+    "ld" = "eza -lhd */ --no-quotes --time-style long-iso";    
     "l" = "eza -lah --no-quotes --time-style long-iso";   
     "ll" = "eza -lh --no-quotes --time-style long-iso";   
     "llr" = "eza -lhr --no-quotes --time-style long-iso";   
