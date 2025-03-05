@@ -84,15 +84,18 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  #nvidia
-  hardware.nvidia-container-toolkit.mount-nvidia-executables = true;
-  hardware.nvidia-container-toolkit.mount-nvidia-docker-1-directories = true;
-  hardware.nvidia.nvidiaSettings = true;
-  hardware.nvidia-container-toolkit.enable = true;
-  hardware.nvidia.nvidiaPersistenced = true;
-  hardware.nvidia.package = true;
-  virtualisation.docker.enableNvidia = true;
-  hardware.nvidia.datacenter.enable = true;
+  # # #nvidia
+  # hardware.nvidia-container-toolkit.mount-nvidia-executables = true;
+  # hardware.nvidia-container-toolkit.mount-nvidia-docker-1-directories = true;
+  # hardware.nvidia.nvidiaSettings = true;
+  # hardware.nvidia-container-toolkit.enable = true;
+  # hardware.nvidia.nvidiaPersistenced = true;
+  # hardware.nvidia.modesetting.enable
+  # hardware.nvidia.package = true;
+  # hardware.nvidia.open = true;
+  # virtualisation.docker.enableNvidia = true;
+  # hardware.nvidia.datacenter.enable = true;
+
   # Enable OpenSSH daemon
   services.openssh = {
     enable = true;
