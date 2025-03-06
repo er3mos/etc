@@ -48,13 +48,13 @@
 			# ../packages/nap.nix
 			# ../packages/qbittorrent.nix
 			# ../packages/rename.nix
-			# ../packages/ripgrep.nix
+			../packages/ripgrep.nix
 			# ../packages/signal-desktop.nix
 			../packages/starship.nix
       ../packages/tidal-hifi.nix
-			# ../packages/tree.nix
-			# ../packages/vlc.nix
-			# ../packages/wezterm.nix
+			../packages/tree.nix
+			../packages/kitty.nix
+			# ../packages/wezterm/wezterm.nix
 			# ../packages/ytdlp.nix
   ];
 
